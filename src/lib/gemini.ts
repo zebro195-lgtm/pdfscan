@@ -55,7 +55,7 @@ export async function analyzePageForQuestions(
   try {
     const apiKey = getNextApiKey();
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
 
     const prompt = `
 You are an expert at extracting questions from exam papers. Analyze this page image and extract ALL questions with perfect accuracy.
@@ -254,7 +254,7 @@ async function analyzePageStructure(
       const apiKey = getNextApiKey();
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ 
-        model: 'gemini-1.5-flash',
+        model: 'gemini-1.5-flash-latest',
         generationConfig: {
           temperature: 0.1,
           topK: 1,
@@ -331,7 +331,7 @@ async function extractQuestionsWithContext(
       const apiKey = getNextApiKey();
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ 
-        model: 'gemini-1.5-flash',
+        model: 'gemini-1.5-flash-latest',
         generationConfig: {
           temperature: 0.1,
           topK: 1,
@@ -492,7 +492,7 @@ export async function performExtraction(
     const apiKey = getNextApiKey();
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-1.5-flash',
+      model: 'gemini-1.5-flash-latest',
       generationConfig: {
         temperature: 0.1,
         topK: 1,
