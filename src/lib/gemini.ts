@@ -3,7 +3,8 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 // Multiple API keys for rotation to avoid rate limits
 const API_KEYS = [
   import.meta.env.VITE_GEMINI_API_KEY,
-  'AIzaSyAJEZhSbomb0LqAfe4Q1hHm3ig46CrSMMM',
+  'AIzaSyAJEZhSbomb0LqAfe4Q1hHm3ig46CrSMMM'
+  'AIzaSyDgShKEEeX9viEQ90JHAUBfwQqlu0c9rBw',
 ].filter(key => key && key.trim() !== '');
 
 if (API_KEYS.length === 0) {
